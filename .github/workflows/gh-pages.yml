@@ -28,7 +28,6 @@ jobs:
           python-version: "3.x"
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@v7
-      - run: uv install
       - run: uv run mkslides build src/
       - uses: actions/upload-pages-artifact@v4
         with:
