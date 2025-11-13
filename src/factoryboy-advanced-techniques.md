@@ -39,7 +39,7 @@ books = BookFactory.create_batch(100)
 
 #### Complex data modeling
 
-<pre><code data-trim class="language-python" data-line-numbers="1-2|4-6|8-14|11-19">
+<pre><code data-trim class="language-python" data-line-numbers="1-2|4-6|8-19|11-14|15-19">
 class Author(models.Model):
     name = models.CharField()
 
