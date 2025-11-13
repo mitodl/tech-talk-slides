@@ -1,0 +1,41 @@
+body {
+  background: #191919;
+  color: #FFFFFF;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 100px auto;
+  width: 800px;
+}
+.slideshow {
+  display: flex;
+}
+.slideshow .title {
+  flex-grow: 2;
+}
+
+.slideshow a {
+  flex-grow: 0;
+  padding: 4px;
+}
+
+h1 {
+  text-align: center;
+}
+
+td {
+  padding: 8px;
+}
+
+a {
+  color: #42affa;
+}
+
+a:visited {
+  color: rgb(19.8216494845, 155.4536082474, 248.7783505155);
+}
+
+a:hover {
+  color: rgb(94.35, 187, 250.75);
+}

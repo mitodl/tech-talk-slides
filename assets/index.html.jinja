@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {% if favicon %}
+            <link rel="icon" href="{{ favicon }}">
+        {% endif %}
+
+        {% if theme %}
+            <link rel="stylesheet" href="{{ theme }}" />
+        {% endif %}
+
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div class ="container">
+            <h1>{{ title }}</h1>
+
+            <div class="slideshows">
+                {%+ for s in slideshows %}
+                    <div class="slideshow">
+                        <span class="title">{{ s.title }}</span>
+                        <a href="{{ s.location }}" target="_blank" title="View slides">slides</a>
+                        <a href="{{ s.location }}?showNotes=true" target="_blank" title="View slides with speaker notes">slides with notes</a>
+                        <a href="{{ s.location }}?print-pdf" target="_blank" title="Download as PDF">PDF</a>
+                        <a href="{{ s.location }}?print-pdf&showNotes=separate-page" target="_blank" title="Download as PDF with speaker notes for printing">PDF with notes</a>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

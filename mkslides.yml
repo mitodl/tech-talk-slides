@@ -1,0 +1,9 @@
+index:
+    # Jinja 2 template to generate index HTML: file path to Jinja2 file
+    template: assets/index.html.jinja
+
+    # Theme of the generated index page: file path or public url to CSS file
+    theme: assets/style.css
+
+    # Title of the generated index page: string
+    title: Open Learning Engineering Tech Talks

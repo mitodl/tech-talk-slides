@@ -1,7 +1,7 @@
 ---
 title: "Factory Boy: Advanced Techniques"
 revealjs:
-    height: 850
+    height: 1050
     width: 1050
 ---
 
@@ -39,7 +39,7 @@ books = BookFactory.create_batch(100)
 
 #### Complex data modeling
 
-<pre><code data-trim class="language-python" data-line-numbers="1-2|4-6|8-14|11-14">
+<pre><code data-trim class="language-python" data-line-numbers="1-2|4-6|8-14|11-19">
 class Author(models.Model):
     name = models.CharField()
 
@@ -69,7 +69,7 @@ class Book(models.Model):
 
 <pre data-id="code-animation-topicfactory"><code data-trim class="language-python" data-line-numbers="">
 class TopicFactory(factory.DjangoModelFactory):
-    code = factory.Faker("word")
+    slug = factory.Faker("word")
     name = factory.Faker("word")
 </code></pre>
 
@@ -83,7 +83,7 @@ class TopicFactory(factory.DjangoModelFactory):
 class TopicFactory(factory.DjangoModelFactory):
     slug = factory.Faker("word")
     name = factory.LazyAttribute(
-        lambda topic: topic.code.capitalize()
+        lambda topic: topic.slug.capitalize()
     )
 </code></pre>
 
@@ -154,7 +154,7 @@ class BookFactory(factory.DjangoModelFactory):
 
         if not extracted:
             extracted = TopicFactory.create_batch(
-                random.randint(0,3)
+                random.randint(1, 3)
             )
 
         self.topics.set(extracted)
@@ -170,7 +170,7 @@ BookFactory.create(topics=[]) # oops, 1-3 topics
 
 <!-- .slide: data-auto-animate -->
 
-<pre data-id="code-animation-bookfactory"><code data-trim class="language-python" data-line-numbers="6-7|18-19|21-22|24-25|27">
+<pre data-id="code-animation-bookfactory"><code data-trim class="language-python" data-line-numbers="6-7|16-17|19-20|22-23|25">
 class BookFactory(factory.DjangoModelFactory):
 
    @factory.post_generation
@@ -182,9 +182,7 @@ class BookFactory(factory.DjangoModelFactory):
             return
 
         if not extracted:
-            extracted = TopicFactory.create_batch(
-                random.randint(0,3)
-            )
+            ... # create topics
 
         self.topics.set(extracted)
 
