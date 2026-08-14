@@ -1,7 +1,7 @@
 Tech Talks
 ---
 
-This project uses [mkslides](github.com/MartenBE/mkslides) to render markdown files into [reveal.js](https://revealjs.com/) slideshows.
+This project uses [mkslides](https://github.com/MartenBE/mkslides) to render markdown files into [reveal.js](https://revealjs.com/) slideshows.
 
 To get started:
 
