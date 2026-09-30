@@ -191,6 +191,10 @@
   line-height: 1.5;
 }
 
+.reveal div.mermaid p {
+  padding: 0;
+}
+
 .reveal ul,
 .reveal ol {
   display: block;
