@@ -8,6 +8,7 @@ revealjs:
   margin: 0.02
   center: false
   pdfSeparateFragments: false
+  pdfMaxPagesPerSlide: 1
 plugins:
   - name: RevealMermaid
     extra_javascript:
@@ -296,21 +297,21 @@ Notes:
 Some things on the horizon:
 
 <div style="width: 100%; display: flex; flex-direction: column;">
-<div class="fragment" data-fragment-index="1" style="flex: 1; margin: 20px 20px 20px 1em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
+<div class="fragment" data-fragment-index="1" style="flex: 1; margin: 20px 20px 20px 0.5em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
     
 ### Updated Provisioning Workflow
 
 Setting up a contract is complicated; requiring coordination between several people, lots of commands to run, easy to make mistakes. A new process is being developed to streamline it and fix some issues with provisioning.
 
 </div>
-<div class="fragment" data-fragment-index="2" style="flex: 1; margin: 20px 20px 20px 1em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
+<div class="fragment" data-fragment-index="2" style="flex: 1; margin: 20px 20px 20px 0.5em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
     
 ### Self-serve analytics
 
 Compliments the manager dash - displays data about contract utiliziation and learner success, and adds in some data sharing consent functionality for contract members.
 
 </div>
-<div class="fragment" data-fragment-index="3" style="flex: 1; margin: 20px 20px 20px 1em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
+<div class="fragment" data-fragment-index="3" style="flex: 1; margin: 20px 20px 20px 0.5em; padding: 30px 30px; border: 1px solid #7a2a28; background-color: #fff; background-opacity: 0.3;">
     
 ### Multi-contract course runs
 

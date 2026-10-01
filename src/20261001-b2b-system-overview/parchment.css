@@ -64,6 +64,12 @@
 
   --r-selection-background-color: var(--parchment-accent);
   --r-selection-color: var(--parchment-bg);
+
+  --r-print-font-size: 24px;
+  --r-print-heading1-size: 2em;
+  --r-print-heading2-size: 1.5em;
+  --r-print-heading3-size: 1.25em;
+  --r-print-heading4-size: 1.1em;
 }
 
 /* ==========================================================================
@@ -299,4 +305,16 @@
 .reveal .slide-number {
   color: var(--parchment-ink-soft);
   background: transparent;
+}
+
+@media print {
+  .reveal {
+    font-size: var(--r-print-font-size);
+  }
+
+  .reveal h1 { font-size: var(--r-print-heading1-size); }
+  .reveal h2 { font-size: var(--r-print-heading2-size); }
+  .reveal h3 { font-size: var(--r-print-heading3-size); }
+  .reveal h4 { font-size: var(--r-print-heading4-size); }
+
 }
