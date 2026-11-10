@@ -7,3 +7,6 @@ requires-python = ">=3.13"
 dependencies = [
     "mkslides>=1.0.10",
 ]
+
+[tool.uv]
+required-version = ">=0.9.17,<0.12.22"
